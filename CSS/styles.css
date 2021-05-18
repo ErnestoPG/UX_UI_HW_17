@@ -1,31 +1,16 @@
 body{
-  margin:0;
+  margin-left: 10%;
+  margin-right: 10%;
   font-family: 'Poppins', sans-serif;
-}
-#page-container{
-  position: relative;
   min-height: 100vh;
 }
-
-#content-wrap{
-  padding-bottom: 2.5rem;
-}
-
-/* HEADER */
-
-header{
-  position: fixed;
-  width: 100%;
-}
+/* NAV */
 .topnav{
   overflow: hidden;
   background-color: white;
-  display: inline-block
-  vertical-align: top;
-}
+  }
 
 .logo{
-  padding:1%;
   width: 25%;%;
   float: left;
 }
@@ -39,82 +24,112 @@ header{
   font-size: 17px;
 }
 
-
 .topnav-right {
   float: right;
   padding: 1%;
 }
 
-
-
 /* HERO */
-
 #heroSection{
-  height: 650px;
-  position: relative;
-
+  padding-bottom: 2.5rem;
+  height: 500px;
 }
 
-.hero{
-  padding: 20px;
+#heroSection h1{
   position: absolute;
   top:25%;
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  font-size: 48px;
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 500;
+  font-size: 60px;
 }
 
-.ernesto{
+.span-red{
   color: #FF4141;
   text-decoration: underline;
 }
-
-/* FOOTER */
-
-#footer{
-  position: absolute;
-  bottom: 0;
+/* MY_WORK */
+.my-work img{
+  height: auto;
   width: 100%;
-  height: 2.5rem;
+}
+.project1{
+  background-color: #1A202C;
+  color: #fff;
+  display: flex;
+  height: 700px;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+  align-items: center;
+  justify-content: center;
 
 }
 
-.footer{
-  overflow: hidden;
-  background-color: white;
-  display: inline-block
+/* grid boxes */
+.project-dark{
+  display: grid;
+  grid-column-gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "img1 img1 description"
+  ;
+}
+.project-light{
+  display: grid;
+  grid-column-gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "description-l img1 img1"
+  ;
+}
+/* grid areas */
+.project-img{
+  grid-area: img1;
+}
 
-  vertical-align: top;
+.project-description-dark{
+  grid-area: description;
+}
+.project-description-light{
+  grid-area: description-l;
+}
+
+/* FOOTER */
+#footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr  1fr 1fr;
+  grid-template-areas:
+  "connect connect social-icons social-icons"
+  ;
 }
 
 .connect{
-  padding-left: 1%;
-  float: left;
-  width: 45%;
-
+  grid-area: connect;
 }
-
-.social-media{
-  height: 100%;
-  float: left;
-  display: inline-block;
-  width: 50%;
-  text-align: right;
-  transform: translate(0%, 50%);
-}
-
-
-.footer img{
-  padding:16px;
-  }
-
 .connect h2{
   font-size: 48px;
-  font-family: 'Playfair Display' , serif;
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 400;
+  padding-top: 21px;
+  padding-top: 21px;
+  margin: 0;
+
+}
+
+.social-icons{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  grid-area: social-icons;
+}
+
+.social-icons img{
+  height: auto;
+  padding-left: 16px;
+  min-width: 32px;
 }
 
 .division{
-
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
